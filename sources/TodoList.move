@@ -4,7 +4,7 @@ module Alice::TodoList {
 //   use std::signer;
 //   use aptos_framework::event;
 //   use std::string::String;
- use Std::ASCII::String;
+//  use Std::ASCII::String;
 use Std::Event;
  use Std::Signer;
   use PontemFramework::Table;
@@ -26,7 +26,7 @@ use Std::Event;
   struct Task has store, drop, copy {
     task_id: u64,
     address:address,
-    content: String,
+    content: vector<u8>,
     completed: bool,
   }
 
@@ -41,7 +41,7 @@ use Std::Event;
   }
 
   public (script) fun create_task(account: signer, content: vector<u8>) acquires TodoList {
-    let content= Std::ASCII::string(content);
+    // let content= Std::ASCII::string(content);
     // gets the signer address
     let signer_address = Signer::address_of(&account);
     // assert signer has created a list

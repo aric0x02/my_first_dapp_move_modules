@@ -20,6 +20,10 @@ dove call 'gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::TodoList::create_l
 dove call 'gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::ScriptBook::store_sum_func'  --args 3 9 
 
 dove view "Alice::TodoList::TodoList" --api "http://127.0.0.1:9933"
+dove view "0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d::Storage::Sum" --api "http://127.0.0.1:9933"
+dove call 'gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::TodoList::create_list'
+dove call 'gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::TodoList::create_task' --args '[65,65,65]'
+
 ```
 
 ```

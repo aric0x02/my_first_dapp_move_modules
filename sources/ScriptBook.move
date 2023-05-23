@@ -14,7 +14,7 @@ module Alice::ScriptBook {
 
         // Get sum from resource.
         let sum = Storage::get_sum(Signer::address_of(&account));
-
+        EventProxy::emit_event(&account, sum);
         // Throw error if sums don't match.
         // Error code is 101.
         assert!((a + b) == sum, 101);
